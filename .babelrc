@@ -1,15 +1,15 @@
 {
     "presets": [
-        [
-            "env",
-            {
-                "modules": false,
-                "targets": {
-                    "browsers": [
-                        "last 2 Chrome versions"
-                    ]
-                }
-            }
-        ]
-    ]
+        "react"
+    ],
+    "plugins": [
+        "syntax-dynamic-import"
+    ],
+    "env": {
+        "development": {
+            "plugins": [
+                "react-hot-loader/babel"
+            ]
+        }
+    }
 }

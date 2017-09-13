@@ -1,12 +1,10 @@
 import './styles/style.less'
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import App from './components/App'
 
-const rootElement = document.createElement('<div id="root"></div>')
-document.body.appendChild(rootElement)
+const rootElement = document.querySelector('#root')
 
 const render = (Component) => {
   ReactDOM.render(
@@ -19,6 +17,7 @@ const render = (Component) => {
 
 render(App)
 
-if(module.hot) {
-  module.hot.accept('./components/App', ()=> render(App))
+// Hot Module Replacement API
+if (module.hot) {
+  module.hot.accept('./components/App', (App) => render(App))
 }

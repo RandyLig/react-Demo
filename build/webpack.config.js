@@ -31,7 +31,8 @@ const commonConfig = {
   plugins: [
     // auto generated html for inject js file
     new HtmlWebpackPlugin({
-      title: 'reactDemo',
+      template: path.join(__dirname, '../src/index.html'),
+      inject: true,
     }),
   ],
   resolve: {
@@ -40,6 +41,7 @@ const commonConfig = {
 }
 
 module.exports = (env) => {
+  process.env.BABEL_ENV = env
   if (env === 'development') {
     return merge(commonConfig, devWebpackConfig)
   }
