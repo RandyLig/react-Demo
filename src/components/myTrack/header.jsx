@@ -8,7 +8,7 @@ export default class Header extends React.Component {
         return <div className="topbar">
             <Icon type="left-circle" style={{"fontSize":"18px","color":"#fff"}} className="topbar-left-circle"></Icon>
             <Icon type={this.props.icon} style={{"fontSize":"18px","color":"#fff"}} className="topbar-icon"></Icon>
-            <span>{this.props.topbarText}</span>
+            <span>{this.props.headerText}</span>
         </div>;
     }
 }

@@ -8,7 +8,7 @@ import TrackCard from './trackCard'
 export default class MyTrack extends React.Component {
     render() {
         return <div>
-        <Header topbarText="我的足迹" icon="car"></Header>
+        <Header headerText="我的足迹" icon="car"></Header>
         <TrackCard></TrackCard> 
         <TrackCard></TrackCard>
         <TrackCard></TrackCard>

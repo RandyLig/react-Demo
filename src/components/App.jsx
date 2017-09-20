@@ -2,11 +2,17 @@ import React, { Component } from 'react'
 import { Router, Route } from 'react-router'
 import ReactDOM from 'react-dom'
 import MyTrack from './myTrack/myTrack'
+import Guide from './guide/guide'
+import AroundSchool from './around-school/around-school'
+import { Input } from 'antd'
+const Search = Input.Search;
 export default class App extends Component {
 
     render() {
         return (
-            <MyTrack topbarText="我的行程"></MyTrack>
+            <Guide>
+               
+            </Guide>
         )
         // return (
         //     // <Router>
