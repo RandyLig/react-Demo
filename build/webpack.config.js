@@ -14,13 +14,29 @@ const commonConfig = {
   },
   module: {
     rules: [
+      { test: /\.css$/, loader: "style-loader!css-loader" },
       {
-        test : /\.jsx?/,
-        use : [
+        test: /\.jsx?$/, // test 去判断是否为.js或.jsx,是的话就是进行es6和jsx的编译
+        loader: 'babel-loader',
+        exclude: /node_modules/, //不进行转换的文件，可以提高打包速度
+        query: {
+          cacheDirectory: true,
+          presets: ['react', 'es2015'],
+          plugins: [
+
+            ["import", { libraryName: "antd", style: "css" }] //按需加载
+
+          ]
+
+        }
+      },
+      {
+        test: /\.jsx?/,
+        use: [
           {
-            loader : 'babel-loader',
-            options :{
-              cacheDirectory : true,
+            loader: 'babel-loader',
+            options: {
+              cacheDirectory: true,
             },
           },
           // add more loaders
@@ -36,7 +52,7 @@ const commonConfig = {
     }),
   ],
   resolve: {
-    extensions: ['.js','.jsx','.json'],
+    extensions: ['.js', '.jsx', '.json'],
   },
 }
 
