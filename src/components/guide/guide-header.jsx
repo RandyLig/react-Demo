@@ -7,7 +7,6 @@ const Search = Input.Search;
 export default class GuideHeader extends React.Component {
     render() {
         return <div className="guide-header">
-            <Badge dot className="avatar" ><Avatar onClick={this.toggleCollapsed} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></Badge>
             <Search
                 placeholder="input you destination"
                 style={{ width: 200 }}
