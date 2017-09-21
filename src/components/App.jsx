@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Router, Route, Link, Switch } from 'react-router'
 import ReactDOM from 'react-dom'
 import MyTrack from './myTrack/myTrack'
+import MyTravel from './myTravel/myTravel'
 import Guide from './guide/guide'
 import AroundSchool from './around-school/around-school'
 import { Input } from 'antd'
@@ -21,6 +22,7 @@ export default class App extends Component {
                     <Route exact path="/" component={Guide}/>
                     <Route path="/around-school" component={AroundSchool}/>
                     <Route path="/myTrack" component={MyTrack}/>
+                    <Route path="/myTravel" component={MyTravel}/>
                 </Switch>
             </Router>
         )

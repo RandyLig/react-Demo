@@ -6,7 +6,7 @@ blockquote, q {quotes: none}   /* 重置嵌套引用的引号类型 */
 blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}  /* 重置嵌套引用*/  
 input,select,textarea,button {vertical-align:middle}  /* 重置表单控件垂直居中*/  
 button {border:0 none;background-color:transparent;cursor:pointer}  /* 重置表单button按钮效果 */  
-body {background:#fff}   /* 重置body 页面背景为白色 */  
+body {}   /* 重置body 页面背景为白色 */  
 body,th,td,input,select,textarea,button {font-size:12px;line-height:1 ;font-family:"微软雅黑", "黑体","宋体";color:#666} /* 重置页面文字属性 */  
 a {color:#666;text-decoration:none}  /* 重置链接a标签 */  
 a:active, a:hover {text-decoration:none}   /* 重置链接a标签的鼠标滑动效果 */  
@@ -30,6 +30,9 @@ body,html {
 #root {
     // background: url('../images/logo.png');
     // display: flex;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
  }
 
 .topbar {
@@ -75,7 +78,18 @@ body,html {
     overflow: auto;
     text-align: center;
 }
+
+.guide-content {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 667px;
+    overflow: auto;
+}
 .search {
+    z-index: 100;
     position: absolute;
     margin: 20px 0;
 }
@@ -88,11 +102,12 @@ body,html {
 
 .school-around {
     position: absolute;
+    z-index: 100;
     width: 100%;
     height: 50px;
     left: 0;
     bottom: 0;
-    background: rgba(238, 238, 238, 0.3);
+    background: rgba(34, 40, 49, 0.9);   // #222831
     text-align: center;
     box-shadow: 2px -2px 3px #EEEEEE;
 }
@@ -101,14 +116,14 @@ body,html {
     font-size: 22px;
     margin-top: 5px;
     color: #108ee9;
-    p {
-        color: #222831;
+    &+p {
+        color: #fff;
     }
 }
 
 .school {
     display: flex;
-    background: rgba(238, 238, 238, 0.2);
+    background: rgba(238, 238, 238, 0.2); 
     height: 120px;
     margin: 20px 0;
     border-radius: 2px;
@@ -145,6 +160,7 @@ body,html {
 }
 
 .menu {
+     z-index: 100;
     position: relative;
      width: 50%;
     text-align: center;

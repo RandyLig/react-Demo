@@ -21,6 +21,11 @@ export default class MenuLeft extends React.Component {
         const path = `/myTrack`
         history.push(path)
     }
+     handleTravel(event) {
+        event.preventDefault()
+        const path = `/myTravel`
+        history.push(path)
+    }
     render() {
         return <div className="menu">
              <Badge dot className="avatar" ><Avatar onClick={this.toggleCollapsed} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></Badge>
@@ -29,6 +34,7 @@ export default class MenuLeft extends React.Component {
                 mode="inline"
                 theme="light"
                 inlineCollapsed={this.state.collapsed}
+                style={{ "borderRadius": "5px"}}
             >
                 <Menu.Item key="1">
                     <Icon type="pie-chart" />
@@ -36,18 +42,18 @@ export default class MenuLeft extends React.Component {
                 </Menu.Item>
                 <Menu.Item key="2">
                     <Icon type="desktop" />
-                    <span>我的行程</span>
+                    <span onClick={this.handleTravel}>我的行程</span>
                 </Menu.Item>
                 <Menu.Item key="3">
                     <Icon type="inbox" />
-                    <span>Option 3</span>
+                    <span>我的收藏</span>
                 </Menu.Item>
-                <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>Navigation Two</span></span>}>
-                    <Menu.Item key="4">Option 9</Menu.Item>
-                    <Menu.Item key="5">Option 10</Menu.Item>
-                    <SubMenu key="sub2" title="Submenu">
-                        <Menu.Item key="6">Option 11</Menu.Item>
-                        <Menu.Item key="7">Option 12</Menu.Item>
+                <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>设置</span></span>}>
+                    <Menu.Item key="4">功能介绍</Menu.Item>
+                    <Menu.Item key="5">帮助中心</Menu.Item>
+                    <SubMenu key="sub2" title="关于">
+                        <Menu.Item key="6">服务条款</Menu.Item>
+                        <Menu.Item key="7">开发人员</Menu.Item>
                     </SubMenu>
                 </SubMenu>
             </Menu>
