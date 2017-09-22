@@ -6,6 +6,7 @@ import MyTravel from './myTravel/myTravel'
 import Guide from './guide/guide'
 import AroundSchool from './around-school/around-school'
 import LogoGather from './login/logo'
+import Login from './login/login'
 import Help from './help/help'
 import About from './about/about'
 import { Input } from 'antd'
@@ -29,6 +30,7 @@ export default class App extends Component {
                     <Route path="/myHelp" component={Help}/>
                     <Route path="/About" component={About}/>
                     <Route path="/logo" component={LogoGather} />
+                    <Route path="/login" component={Login} />
                 </Switch>
             </Router>
         )

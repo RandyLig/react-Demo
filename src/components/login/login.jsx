@@ -25,6 +25,7 @@ export default class Login extends React.Component {
 
             </LogoGather>
             <Input
+                className="login-input"
                 placeholder="Enter your userName"
                 prefix={<Icon type="user" />}
                 suffix={suffix}
