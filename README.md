@@ -2,7 +2,7 @@
 
 # git clone
 
-下载或者clone一个项目到本地，用命令行打开文件夹
+下载或者clone一个项目到本地，用命令行打开文件夹,注意clone后转到“lg”分支
 
 # npm install
 
