@@ -59,6 +59,7 @@ export default class GuideContent extends React.Component {
       map.addControl(overviewControl);
     }
       initMap();
+      map.setMapStyle({style:'pink'});  // 添加地图样式
     }
     render() {
         return <div className="guide-content" id="map">

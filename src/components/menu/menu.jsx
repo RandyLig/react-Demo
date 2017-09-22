@@ -26,6 +26,16 @@ export default class MenuLeft extends React.Component {
         const path = `/myTravel`
         history.push(path)
     }
+    handleHelp(event) {
+        event.preventDefault()
+        const path = `/myHelp`
+        history.push(path)
+    }
+    handleAbout(event) {
+        event.preventDefault()
+        const path = `/About`
+        history.push(path)
+    }
     render() {
         return <div className="menu">
              <Badge dot className="avatar" ><Avatar onClick={this.toggleCollapsed} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></Badge>
@@ -50,11 +60,8 @@ export default class MenuLeft extends React.Component {
                 </Menu.Item>
                 <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>设置</span></span>}>
                     <Menu.Item key="4">功能介绍</Menu.Item>
-                    <Menu.Item key="5">帮助中心</Menu.Item>
-                    <SubMenu key="sub2" title="关于">
-                        <Menu.Item key="6">服务条款</Menu.Item>
-                        <Menu.Item key="7">开发人员</Menu.Item>
-                    </SubMenu>
+                    <Menu.Item key="5"><span onClick={this.handleHelp}>帮助与反馈</span></Menu.Item>
+                    <Menu.Item key="6"><span onClick={this.handleAbout}>关于</span></Menu.Item>
                 </SubMenu>
             </Menu>
         </div>;

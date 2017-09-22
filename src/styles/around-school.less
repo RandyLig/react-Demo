@@ -1,0 +1,37 @@
+.school {
+    display: flex;
+    background: rgba(238, 238, 238, 0.2); 
+    height: 120px;
+    margin: 20px 0;
+    border-radius: 2px;
+    box-shadow: 1px 1px 3px #EEEEEE;
+    padding:  20px 30px 30px 30px;
+    img {
+        width:70px;
+        height: 70px;
+        display: inline-block;
+        background-position: center;
+        background-size: cover;
+
+    }
+    p {
+        display: inline-block;
+        font-size: 14px;
+        color: #393E46;
+        margin:0 0 10px 20px;
+        span {
+            padding: 0 4px;
+            font-weight: bold;
+        }
+    }
+    div {
+        display: inline-block;
+        &:first-child {
+            flex:0 70px;
+        }
+        &:last-child {
+            flex:1;
+            padding: 10px;
+        }
+    }
+}
