@@ -21,7 +21,7 @@ const commonConfig = {
         exclude: /node_modules/, //不进行转换的文件，可以提高打包速度
         query: {
           cacheDirectory: true,
-          presets: ['react', 'es2015'],
+          presets: ['react', 'es2015','stage-0'],
           plugins: [
 
             ["import", { libraryName: "antd", style: "css" }] //按需加载

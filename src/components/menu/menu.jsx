@@ -34,7 +34,7 @@ export default class MenuLeft extends React.Component {
                 mode="inline"
                 theme="light"
                 inlineCollapsed={this.state.collapsed}
-                style={{ "borderRadius": "5px"}}
+                style={{ "borderRadius": "5px","marginTop":"80px"}}
             >
                 <Menu.Item key="1">
                     <Icon type="pie-chart" />

@@ -5,6 +5,7 @@ import MyTrack from './myTrack/myTrack'
 import MyTravel from './myTravel/myTravel'
 import Guide from './guide/guide'
 import AroundSchool from './around-school/around-school'
+import LogoGather from './logo'
 import { Input } from 'antd'
 import createBrowserHistory from 'history/createBrowserHistory'
 
@@ -23,6 +24,7 @@ export default class App extends Component {
                     <Route path="/around-school" component={AroundSchool}/>
                     <Route path="/myTrack" component={MyTrack}/>
                     <Route path="/myTravel" component={MyTravel}/>
+                    <Route path="/logo" component={LogoGather} />
                 </Switch>
             </Router>
         )
