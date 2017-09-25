@@ -5,6 +5,10 @@ import SchoolAround from './school-around'
 import MenuLeft from '../menu/menu'
 import GuideContent from "./guide-content"
 export default class Guide extends React.Component {
+    constructor(props) {
+        super(props)
+        console.log(location.pathname)
+    }
     render() {
         return <div>
             <GuideHeader></GuideHeader>

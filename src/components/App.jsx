@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Router, Route, Link, Switch } from 'react-router'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
 import ReactDOM from 'react-dom'
 import MyTrack from './myTrack/myTrack'
 import MyTravel from './myTravel/myTravel'
@@ -9,11 +9,9 @@ import LogoGather from './login/logo'
 import Login from './login/login'
 import Help from './help/help'
 import About from './about/about'
-import { Input } from 'antd'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 const customHistory = createBrowserHistory()
-const Search = Input.Search;
 export default class App extends Component {
 
     render() {
@@ -21,9 +19,10 @@ export default class App extends Component {
             // <Guide>
 
             // </Guide>
-            <Router history= { customHistory }>
+            <Router>
                 <Switch>
-                    <Route exact path="/" component={Guide}/>
+                    <Route exact path="/" component={Login}/>
+                    <Route path="/guide" component={Guide}/>
                     <Route path="/around-school" component={AroundSchool}/>
                     <Route path="/myTrack" component={MyTrack}/>
                     <Route path="/myTravel" component={MyTravel}/>

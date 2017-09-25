@@ -38,7 +38,9 @@ export default class SchoolAround extends React.Component {
     handleRoute(event) {
         event.preventDefault()
         const path = `/around-school`
-        history.push(path)
+        // history.push(path)
+        location.assign(`/around-school`)
+        console.log(location.pathname)
     }
     render() {
         return <div className="school-around" onClick={this.handleRoute}>

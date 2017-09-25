@@ -19,22 +19,26 @@ export default class MenuLeft extends React.Component {
      handleRoute(event) {
         event.preventDefault()
         const path = `/myTrack`
-        history.push(path)
+        location.assign(`/myTrack`)
+        console.log(location.pathname)
     }
      handleTravel(event) {
         event.preventDefault()
         const path = `/myTravel`
-        history.push(path)
+        location.assign(`/myTravel`)
+        console.log(location.pathname)
     }
     handleHelp(event) {
         event.preventDefault()
         const path = `/myHelp`
-        history.push(path)
+        location.assign(`/myHelp`)
+        console.log(location.pathname)
     }
     handleAbout(event) {
         event.preventDefault()
         const path = `/About`
-        history.push(path)
+        location.assign(`/About`)
+        console.log(location.pathname)
     }
     render() {
         return <div className="menu">

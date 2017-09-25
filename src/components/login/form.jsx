@@ -1,6 +1,9 @@
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import React, { Component } from 'react';
 import { render } from "react-dom";
+import { browserHistory, hashHistory } from 'react-router-dom'
+import createHistory from 'history/createBrowserHistory'
+const history = createHistory()
 const FormItem = Form.Item;
 class NormalLoginForm extends React.Component {
     constructor(props) {
@@ -12,8 +15,18 @@ class NormalLoginForm extends React.Component {
                     console.log('Received values of form: ', values);
                 }
             });
+
+            location.assign(`/guide`)
         }
+        // console.log(browserHistory.getCurrentLocation()); //获取当前URL信息
+        console.log(location.pathname)
     }
+
+    // handleLogin(event) {
+    //     event.preventDefault()
+    //     const path = `/`
+    //     hashHistory.pushState(path)
+    // }
     render() {
         const { getFieldDecorator } = this.props.form;
         return (
@@ -48,7 +61,7 @@ class NormalLoginForm extends React.Component {
             </Form>
         );
     }
-    
+
 }
 const MyNormalLoginForm = Form.create()(NormalLoginForm);
 // LoginForm = Form.create()(LoginForm);
