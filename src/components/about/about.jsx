@@ -3,7 +3,7 @@ import { render } from "react-dom";
 import Header from '../myTrack/header'
 export default class About extends React.Component {
     render() {
-        return <div className="about">
+        return <div className="about123">
             <Header headerText="关于"></Header>
             <section className="about-logo"><p> School Guide_V-0.1 </p></section>
             <footer className="about-footer"><p>develop by 李钢 & 杨玲利 & 宋玺龙</p>

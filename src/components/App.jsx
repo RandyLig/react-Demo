@@ -9,9 +9,15 @@ import LogoGather from './login/logo'
 import Login from './login/login'
 import Help from './help/help'
 import About from './about/about'
+import Layout from './animation'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 const customHistory = createBrowserHistory()
+// const getConfirmation = (message, callback) => {
+//   const allowTransition = window.confirm(message)               // 用户进入页面前进行的操作
+//   callback(allowTransition)
+// }
+
 export default class App extends Component {
 
     render() {
@@ -21,8 +27,9 @@ export default class App extends Component {
             // </Guide>
             <Router>
                 <Switch>
+                <Layout>
                     <Route exact path="/" component={Login}/>
-                    <Route path="/guide" component={Guide}/>
+                    <Route path="/guide" component={Guide} />
                     <Route path="/around-school" component={AroundSchool}/>
                     <Route path="/myTrack" component={MyTrack}/>
                     <Route path="/myTravel" component={MyTravel}/>
@@ -30,6 +37,7 @@ export default class App extends Component {
                     <Route path="/About" component={About}/>
                     <Route path="/logo" component={LogoGather} />
                     <Route path="/login" component={Login} />
+                </Layout>
                 </Switch>
             </Router>
         )
