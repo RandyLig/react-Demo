@@ -10,10 +10,10 @@ import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import ReactDOM from 'react-dom'
-const RadioGroup = Radio.Group;
 export default class LogoGather extends React.Component {
     constructor(props) {
         super(props);
+        const RadioGroup = Radio.Group;
         this.state = {};
         this.interval = null;
         this.gather = true;
