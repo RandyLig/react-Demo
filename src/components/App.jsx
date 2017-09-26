@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'
+import { cache } from 'react-keeper'
 import ReactDOM from 'react-dom'
 import MyTrack from './myTrack/myTrack'
 import MyTravel from './myTravel/myTravel'
@@ -28,15 +29,15 @@ export default class App extends Component {
             <Router>
                 <Switch>
                 <Layout>
-                    <Route exact path="/" component={Login}/>
-                    <Route path="/guide" component={Guide} />
-                    <Route path="/around-school" component={AroundSchool}/>
-                    <Route path="/myTrack" component={MyTrack}/>
-                    <Route path="/myTravel" component={MyTravel}/>
-                    <Route path="/myHelp" component={Help}/>
-                    <Route path="/About" component={About}/>
-                    <Route path="/logo" component={LogoGather} />
-                    <Route path="/login" component={Login} />
+                    <Route exact path="/" component={Login} cache />
+                    <Route path="/guide" component={Guide} cache/>
+                    <Route path="/around-school" component={AroundSchool} cache/>
+                    <Route path="/myTrack" component={MyTrack} cache/>
+                    <Route path="/myTravel" component={MyTravel} cache/>
+                    <Route path="/myHelp" component={Help} cache/>
+                    <Route path="/About" component={About} cache/>
+                    <Route path="/logo" component={LogoGather}  cache/>
+                    <Route path="/login" component={Login} cache/>
                 </Layout>
                 </Switch>
             </Router>

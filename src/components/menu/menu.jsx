@@ -63,9 +63,8 @@ export default class MenuLeft extends React.Component {
                     <span>我的收藏</span>
                 </Menu.Item>
                 <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>设置</span></span>}>
-                    <Menu.Item key="4">功能介绍</Menu.Item>
-                    <Menu.Item key="5"><span onClick={this.handleHelp}>帮助与反馈</span></Menu.Item>
-                    <Menu.Item key="6"><span onClick={this.handleAbout}>关于</span></Menu.Item>
+                    <Menu.Item key="4"><span onClick={this.handleHelp}>帮助与反馈</span></Menu.Item>
+                    <Menu.Item key="5"><span onClick={this.handleAbout}>关于</span></Menu.Item>
                 </SubMenu>
             </Menu>
         </div>;

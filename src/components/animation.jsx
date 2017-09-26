@@ -9,7 +9,8 @@ class Layout extends React.Component {
             className="react-container"
             transitionName="slide-in"
             transitionEnterTimeout={500}
-            transitionLeaveTimeout={500}>
+            transitionLeaveTimeout={500}
+            transitionAppear={true}>
                 <div key={this.props.location.pathname} className={this.props.location.pathname}>
                     {this.props.children}
                 </div>
