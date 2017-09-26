@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from "react-dom";
 import Header from '../myTrack/header'
-import Advice from './advice'
+import AdviceBtn from './advice-btn'
 import { Rate, Tabs, Icon } from 'antd'
 const TabPane = Tabs.TabPane;
 function callback(key) {
@@ -38,7 +38,7 @@ export default class Help extends React.Component {
                     <TabPane tab="图标图例" key="2">这里放地图上图标代表的意义</TabPane>
                 </Tabs>
             </div>
-            <Advice></Advice>
+            <AdviceBtn></AdviceBtn>
         </div>;
     }
 }
