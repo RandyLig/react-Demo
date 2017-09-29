@@ -16,12 +16,13 @@ body,html {
     z-index: -2;
  }
 
- .loading {
-    height: 667px;
-    width: 100%;
-    position: none;
-    max-height: 100%;
- }
+//  .loading {
+   
+//     height: 667px;
+//     width: 300px;
+//     max-height: 130px;
+//     z-index: 200;
+//  }
 .react-container {
     height: 100%;
 }
@@ -55,5 +56,27 @@ body,html {
   &.slide-in-leave-active {
     opacity: 0.01;
     transform: translate3D(-100%, 0, 0);
+  }
+}
+
+
+// myCollect 轮播图
+.ant-carousel .slick-slide {
+  margin: 20px 0;
+  text-align: center;
+  height: 140px;
+  line-height: 140px;
+  background: #393E46;
+  overflow: hidden;
+}
+
+.ant-carousel .slick-slide h3 {
+  color: #fff;
+}
+
+.Tag {
+  padding: 0 18px;
+  .Tag-item {
+    margin: 10px 12px 10px 0;
   }
 }

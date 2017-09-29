@@ -12,6 +12,7 @@ import Help from './help/help'
 import About from './about/about'
 import Layout from './animation'
 import Advice from './help/advice'
+import MyCollect from './myCollect/myCollcet'
 import createBrowserHistory from 'history/createBrowserHistory'
 
 const customHistory = createBrowserHistory()
@@ -40,6 +41,7 @@ export default class App extends Component {
                     <Route path="/logo" component={LogoGather}  cache/>
                     <Route path="/login" component={Login} cache/>
                     <Route path="/myAdvice" component={Advice} cache/>
+                    <Route path="/myCollect" component={MyCollect} cache/>
                 </Layout>
                 </Switch>
             </Router>

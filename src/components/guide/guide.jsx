@@ -21,7 +21,7 @@ export default class Guide extends React.Component {
                 <MenuLeft></MenuLeft>
                 <GuideContent>
                 </GuideContent>
-                <Spin tip="Loading"></Spin>
+                <Spin tip="Loading" className="loading"></Spin>
         </div>;
     }
 }
