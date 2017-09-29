@@ -15,7 +15,6 @@ export default class Guide extends React.Component {
     }
     render() {
         return <div className="guide">
-            
                 <GuideHeader></GuideHeader>
                 <SchoolAround></SchoolAround>
                 <MenuLeft></MenuLeft>

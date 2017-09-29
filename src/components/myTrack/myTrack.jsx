@@ -9,9 +9,9 @@ export default class MyTrack extends React.Component {
     render() {
         return <div>
         <Header headerText="我的足迹" icon="car"></Header>
-        <TrackCard></TrackCard> 
-        <TrackCard></TrackCard>
-        <TrackCard></TrackCard>
+        <TrackCard myTrackTitle="杭州" myTrackContent="浙江科技学院"></TrackCard> 
+        <TrackCard myTrackTitle="杭州" myTrackContent="浙江工业大学"></TrackCard>
+        <TrackCard myTrackTitle="绍兴" myTrackContent="浙江文理学院"></TrackCard>
         <BackTop /> 
         </div>;
     }

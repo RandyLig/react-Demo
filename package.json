@@ -31,6 +31,7 @@
     "jsx-loader": "^0.13.2",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "moment": "^2.18.1",
     "nodemon": "^1.12.0",
     "postcss-loader": "^2.0.6",
     "react-keeper": "^2.1.6",

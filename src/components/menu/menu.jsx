@@ -40,6 +40,12 @@ export default class MenuLeft extends React.Component {
         location.assign(`/About`)
         console.log(location.pathname)
     }
+    handleAbout(event) {
+        event.preventDefault()
+        const path = `/MyCollect`
+        location.assign(`/MyCollect`)
+        console.log(location.pathname)
+    }
     render() {
         return <div className="menu">
              <Badge dot className="avatar" ><Avatar onClick={this.toggleCollapsed} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></Badge>
@@ -60,7 +66,7 @@ export default class MenuLeft extends React.Component {
                 </Menu.Item>
                 <Menu.Item key="3">
                     <Icon type="inbox" />
-                    <span>我的收藏</span>
+                    <span onClick={this.handleCollect}>我的收藏</span>
                 </Menu.Item>
                 <SubMenu key="sub1" title={<span><Icon type="appstore" /><span>设置</span></span>}>
                     <Menu.Item key="4"><span onClick={this.handleHelp}>帮助与反馈</span></Menu.Item>
