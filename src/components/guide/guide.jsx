@@ -4,7 +4,8 @@ import GuideHeader from './guide-header'
 import SchoolAround from './school-around'
 import MenuLeft from '../menu/menu'
 import GuideContent from "./guide-content"
-import { Spin } from 'antd'
+import Loading from '../loading'
+import { Spin } from 'antd'  // <Spin tip="Loading" className="loading"></Spin>
 export default class Guide extends React.Component {
     constructor(props) {
         super(props)
@@ -20,7 +21,6 @@ export default class Guide extends React.Component {
                 <MenuLeft></MenuLeft>
                 <GuideContent>
                 </GuideContent>
-                <Spin tip="Loading" className="loading"></Spin>
         </div>;
     }
 }

@@ -16,7 +16,7 @@ import MyCollect from './myCollect/myCollcet'
 import createBrowserHistory from 'history/createBrowserHistory'
 import 'moment/locale/zh-cn';
 import moment from 'moment';
-moment.locale('zh-cn');
+moment.locale('zh-cn');  // 引入日历必须的
 const customHistory = createBrowserHistory()
 // const getConfirmation = (message, callback) => {
 //   const allowTransition = window.confirm(message)               // 用户进入页面前进行的操作

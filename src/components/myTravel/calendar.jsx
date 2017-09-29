@@ -13,8 +13,8 @@ export default class Calendars extends React.Component {
     constructor(props) {
         super(props);
      this.state = {
-    value: moment('2017-01-25'),
-    selectedValue: moment('2017-01-25'),
+    value: moment('2017-09-30'),
+    selectedValue: moment('2017-09-30'),
   }
   this.onSelect = (value) => {
     this.setState({

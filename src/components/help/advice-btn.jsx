@@ -15,6 +15,7 @@ export default class AdviceBtn extends React.Component {
     render() {
         return <div className="advice">
             <Button size="large" style={{ "marginTop": "10px" }} onClick={this.handleAdvice}><Icon type="message" style={{ "fontSize": "18px" }}></Icon>产品建议</Button>
+            <a style={{ "marginTop": "16px","color": "#393E46" ,"position":"absolute","right":"16px"}}>我的反馈</a>
         </div>;
     }
 }
