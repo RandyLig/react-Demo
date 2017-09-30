@@ -40,15 +40,15 @@ export default class MenuLeft extends React.Component {
         location.assign(`/About`)
         console.log(location.pathname)
     }
-    handleAbout(event) {
+    handleCollect(event) {
         event.preventDefault()
-        const path = `/MyCollect`
-        location.assign(`/MyCollect`)
+        const path = `/myCollect`
+        location.assign(`/myCollect`)
         console.log(location.pathname)
     }
     render() {
         return <div className="menu">
-             <Badge dot className="avatar" ><Avatar onClick={this.toggleCollapsed} src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></Badge>
+             <Badge dot className="avatar" ><Avatar src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" /></Badge>
             <Menu
                 defaultSelectedKeys={['1']}
                 mode="inline"
