@@ -9,18 +9,26 @@ import { Spin } from 'antd'  // <Spin tip="Loading" className="loading"></Spin>
 export default class Guide extends React.Component {
     constructor(props) {
         super(props)
-        console.log(location.pathname)
+        console.log(location.pathname);
+        this.state = {
+            loaded: false
+        }
+    }
+    componentDidMount() {
+        console.log(111111111);
     }
     componentWillMount() {
-
+        { this.state.loaded ? <Loading></Loading> : null }
     }
+
     render() {
         return <div className="guide">
-                <GuideHeader></GuideHeader>
-                <SchoolAround></SchoolAround>
-                <MenuLeft></MenuLeft>
-                <GuideContent>
-                </GuideContent>
+            <Loading></Loading>
+            <GuideHeader></GuideHeader>
+            <SchoolAround></SchoolAround>
+            <MenuLeft></MenuLeft>
+            <GuideContent>
+            </GuideContent>
         </div>;
     }
 }
