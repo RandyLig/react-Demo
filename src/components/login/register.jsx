@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { render } from "react-dom";
 import LogoGather from './logo';
 import { Form, Icon, Input, Button, Checkbox, Tooltip, Cascader, Select, Row, Col, AutoComplete } from 'antd';
+import Header2 from '../header-2'
 const FormItem = Form.Item;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
@@ -92,8 +93,9 @@ class Register extends React.Component {
         const websiteOptions = autoCompleteResult.map(website => (
         <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
         ));
-            return <div className="register">
-                <Form onSubmit={this.handleSubmit}>
+            return <div>
+                <Header2></Header2>
+                <Form onSubmit={this.handleSubmit} className="register">
             <FormItem
             {...formItemLayout}
             label="Phone Number"
