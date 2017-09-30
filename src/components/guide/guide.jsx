@@ -10,17 +10,7 @@ export default class Guide extends React.Component {
     constructor(props) {
         super(props)
         console.log(location.pathname);
-        this.state = {
-            loaded: false
-        }
     }
-    componentDidMount() {
-        console.log(111111111);
-    }
-    componentWillMount() {
-        { this.state.loaded ? <Loading></Loading> : null }
-    }
-
     render() {
         return <div className="guide">
             <Loading></Loading>

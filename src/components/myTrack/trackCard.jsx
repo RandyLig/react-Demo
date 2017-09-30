@@ -5,17 +5,25 @@ export default class TrackCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            loaded: false
+            loading: true
         }
     }
     componentDidMount() {
-        this.setState = {
-            loaded: !this.state.loaded
-        }
+        var self = this;
+        setTimeout(() => {
+            this.setState({ loading: false });
+        }, 2000);
+        // setTimeout(function () {
+        //     self.setState = {
+        //         loading: false
+        //     }
+        // }, 2000);
     }
     render() {
-        return <Card title={this.props.myTrackTitle} className="TrackCard ">
-            {this.props.myTrackContent}
+        const {loading} = this.state;
+        return <Card title={this.props.myTrackTitle} className="TrackCard " loading={loading}>
+            <div><span style={{ 'color': '#f50' }}> ● </span> {this.props.myTrackContent}</div>
+            <div>{this.props.myTrackContents}</div>
         </Card>;
     }
 }

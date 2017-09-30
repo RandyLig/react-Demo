@@ -12,6 +12,9 @@ export default class MyTrack extends React.Component {
         <TrackCard myTrackTitle="杭州" myTrackContent="浙江科技学院"></TrackCard> 
         <TrackCard myTrackTitle="杭州" myTrackContent="浙江工业大学"></TrackCard>
         <TrackCard myTrackTitle="绍兴" myTrackContent="浙江文理学院"></TrackCard>
+        <TrackCard myTrackTitle="绍兴" myTrackContent="浙江文理学院"></TrackCard>
+        <TrackCard myTrackTitle="绍兴" myTrackContent="浙江文理学院"></TrackCard>
+        
         <BackTop /> 
         </div>;
     }
