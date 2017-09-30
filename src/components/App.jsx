@@ -13,6 +13,7 @@ import About from './about/about'
 import Layout from './animation'
 import Advice from './help/advice'
 import MyCollect from './myCollect/myCollcet'
+import RegisterForm from './login/register'
 import createBrowserHistory from 'history/createBrowserHistory'
 import 'moment/locale/zh-cn';
 import moment from 'moment';
@@ -40,8 +41,9 @@ export default class App extends Component {
                     <Route path="/myTravel" component={MyTravel} cache/>
                     <Route path="/myHelp" component={Help} cache/>
                     <Route path="/About" component={About} cache/>
-                    <Route path="/logo" component={LogoGather}  cache/>
-                    <Route path="/login" component={Login} cache/>
+                    <Route path="/login" component={Login} cache>
+                    </Route>
+                    <Route path="/register" component={RegisterForm} cache />
                     <Route path="/myAdvice" component={Advice} cache/>
                     <Route path="/myCollect" component={MyCollect} cache/>
                 </Layout>

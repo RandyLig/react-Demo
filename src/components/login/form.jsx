@@ -1,7 +1,7 @@
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 import React, { Component } from 'react';
 import { render } from "react-dom";
-import { browserHistory, hashHistory } from 'react-router-dom'
+import { browserHistory, hashHistory, Link } from 'react-router-dom'
 import createHistory from 'history/createBrowserHistory'
 const history = createHistory()
 const FormItem = Form.Item;
@@ -56,7 +56,7 @@ class NormalLoginForm extends React.Component {
                     <Button type="primary" htmlType="submit" className="login-form-button">
                         Log in
                     </Button>
-                    Or <a href="">register now!</a>
+                    Or <Link to="/login/register">register now!</Link>
                 </FormItem>
             </Form>
         );
