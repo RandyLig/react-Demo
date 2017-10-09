@@ -64,7 +64,7 @@ export default class GuideContent extends React.Component {
     function addC() {
       // 添加定位控件
       var geolocationControl = new BMap.GeolocationControl({
-         anchor: BMAP_ANCHOR_TOP_RIGHT,
+        anchor: BMAP_ANCHOR_TOP_RIGHT,
       });
       geolocationControl.addEventListener("locationSuccess", function (e) {
         // 定位成功事件
@@ -76,12 +76,18 @@ export default class GuideContent extends React.Component {
         address += e.addressComponent.streetNumber;
         alert("当前定位地址为：" + address);
       });
-      geolocationControl.addEventListener("locationError", function (e) {
-        // 定位失败事件
+      // 定位失败事件
+      geolocationControl.addEventListener("locationError", function (e) {           
         alert(e.message);
       });
-      map.addControl(geolocationControl);
+       map.addControl(geolocationControl);
+                                                                                      // var local = new BMap.LocalSearch(map, {
+                                                                                      //   renderOptions: { map: map }
+                                                                                      // });
+                                                                                      // local.search("景点");    //搜索景点
+                                                                                    
     }
+
     initMap();
     // map.setMapStyle({ style: 'pink' });  // 添加地图样式
   }

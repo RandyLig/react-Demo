@@ -7,7 +7,7 @@ export default class Tags extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tags: ['Unremovable', '浙江科技学院', '自然山与水'],
+            tags: ['Unremovable', '浙江科技学院', '自然山与水'], 
             inputVisible: false,
             inputValue: '',
             color: ['#f50','#2db7f5','#87d068','#108ee9','#393E46']
