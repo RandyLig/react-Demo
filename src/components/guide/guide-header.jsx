@@ -7,6 +7,15 @@ const Search = Input.Search;
 export default class GuideHeader extends React.Component {
     constructor(props) {
         super(props)
+
+    }
+    handleSearch(event,value) {
+        // event.preventDefault()
+        console.log(value)
+        // const path = `/around-school`
+        // history.push(path)
+        location.assign(`/navigation`)
+        // console.log(location.pathname)
     }
     componentDidMount() {
         function G(id) {
@@ -66,7 +75,7 @@ export default class GuideHeader extends React.Component {
                 type="text"
                 placeholder="input you destination"
                 style={{ 'width': '200px' }}
-                onSearch={value => console.log(value) }
+                onSearch={this.handleSearch}
                 className="search"
                 id="suggestId"
                 autocomplete
