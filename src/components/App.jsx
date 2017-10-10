@@ -14,6 +14,7 @@ import Layout from './animation'
 import Advice from './help/advice'
 import MyCollect from './myCollect/myCollcet'
 import RegisterForm from './login/register'
+import Navigation from './navigation/navigation'
 import createBrowserHistory from 'history/createBrowserHistory'
 import 'moment/locale/zh-cn';
 import moment from 'moment';
@@ -46,6 +47,7 @@ export default class App extends Component {
                     <Route path="/register" component={RegisterForm} cache />
                     <Route path="/myAdvice" component={Advice} cache/>
                     <Route path="/myCollect" component={MyCollect} cache/>
+                    <Route path="/navigation" component={Navigation} cache/>
                 </Layout>
                 </Switch>
             </Router>

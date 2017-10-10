@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { render } from "react-dom";
-import { Avatar, Badge } from 'antd';
-import { Input } from 'antd'
+import React, {Component} from 'react';
+import {render} from "react-dom";
+import { Icon, Input } from 'antd'
 const Search = Input.Search;
 
-export default class GuideHeader extends React.Component {
+export default class Navigation extends React.Component {
     constructor(props) {
         super(props)
+
     }
     componentDidMount() {
         function G(id) {
@@ -14,6 +14,8 @@ export default class GuideHeader extends React.Component {
         }
 
         var map = new BMap.Map("map");
+
+
         var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
             {
                 "input": "suggestId"
@@ -62,16 +64,8 @@ export default class GuideHeader extends React.Component {
     }
     render() {
         return <div className="guide-header">
-            <Search
-                type="text"
-                placeholder="input you destination"
-                style={{ 'width': '200px' }}
-                onSearch={value => console.log(value) }
-                className="search"
-                id="suggestId"
-                autocomplete
-                />
-            <div id="searchResultPanel" style={{ 'border': '1px solid #C0C0C0', 'width': '150px', 'height': 'auto', 'display': 'none', 'zIndex': '1000' }} class="searchResult"></div>
+            请输入: <Search type="text" id="suggestId" size="20" style={{ 'width': '150px' }} />
+            <div id="searchResultPanel" style={{ 'border': '1px solid #C0C0C0', 'width': '150px', 'height': 'auto', 'display': 'none' }} ref="searchResultPanel"></div>
         </div>;
     }
 }
